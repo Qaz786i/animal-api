@@ -7,7 +7,7 @@ pipeline    {
             }
         }
         stage('build and push') {
-            environemnt {
+            environment {
                 DOCKER_CREDS = credentials('docker-creds')
             }
             steps{
