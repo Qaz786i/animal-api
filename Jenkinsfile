@@ -22,7 +22,7 @@ pipeline    {
                 sh "echo '    driver: overlay' >> docker-compose.yaml"
                 sh "scp ./docker-compose.yaml jenkins@docker-manager:home/jenkins/docker-compose.yaml"
                 sh "scp .nginx.conf jenkins@docker-manager:home/jenkins/nginx.conf"
-                sh "ssh jenkins@docker-manager 'docker stack deploy --compose-file docker-compose.yaml animal_api stack"
+                sh "ssh jenkins@docker-manager 'docker stack deploy --compose-file docker-compose.yaml animal-api-stack"
             }
         }
     }
